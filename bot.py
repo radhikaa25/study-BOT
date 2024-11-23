@@ -2,7 +2,7 @@ import logging
 from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, CallbackContext
 
-# Replace with your Bot Token
+# Bot Token
 TOKEN = "8160386397:AAECCAzPpWfR0GvWx0VyD2kKC_Lm0r7xvAc"
 
 
@@ -10,7 +10,7 @@ TOKEN = "8160386397:AAECCAzPpWfR0GvWx0VyD2kKC_Lm0r7xvAc"
 logging.basicConfig(format='%(asctime)s - %(levelname)s - %(message)s', level=logging.INFO)
 logger = logging.getLogger()
 
-# Start command to greet the user
+# /Start command to greet the user
 async def start(update: Update, context: CallbackContext) -> None:
     logger.info(f"Start command received from {update.message.from_user.username}")
     options = ("Here are some things I can help you with:\n"
@@ -38,14 +38,14 @@ async def explain(update: Update, context: CallbackContext) -> None:
 # Command to provide study resources
 async def resources(update: Update, context: CallbackContext) -> None:
     logger.info(f"Resources command received from {update.message.from_user.username}")
-    # Here you would provide actual resource links
+    #Provide actual resource links
     await update.message.reply_text("Here are some resources for studying:\n1. [Resource Link 1]\n2. [Resource Link 2]\n3. [Resource Link 3]")
     logger.info("Replied with study resources")
 
 # Command to share study group links
 async def study_groups(update: Update, context: CallbackContext) -> None:
     logger.info(f"Study groups command received from {update.message.from_user.username}")
-    # Here you would provide actual group links
+    #Provide actual group links
     await update.message.reply_text("Here are some study groups on Telegram:\n1. [Group Name 1] - [Link]\n2. [Group Name 2] - [Link]")
     logger.info("Replied with study group links")
 
