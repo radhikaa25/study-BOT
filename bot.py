@@ -3,7 +3,7 @@ from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, CallbackContext
 
 # Bot Token
-TOKEN = "8160386397:AAECCAzPpWfR0GvWx0VyD2kKC_Lm0r7xvAc"
+TOKEN = ""
 
 
 # Set up logging to help track the flow and errors
